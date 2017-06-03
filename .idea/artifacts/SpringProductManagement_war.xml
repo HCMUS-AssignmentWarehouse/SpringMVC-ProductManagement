@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringProductManagement:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="com.iceteaviet.ProductManagement-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SpringProductManagement:war exploded" />
+    </root>
+  </artifact>
+</component>
