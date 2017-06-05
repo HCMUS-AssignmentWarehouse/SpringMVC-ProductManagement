@@ -249,7 +249,7 @@
                             </div>
                             <div class="x_content">
                                 <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
-                                    <div class="box-body box-profile"><img src="/resources/images/user.jpg" alt="User profile picture" class="profile-user-img img-responsive img-circle"/>
+                                    <div class="box-body box-profile"><img src="/resources/images/img.jpg" alt="User profile picture" class="profile-user-img img-responsive img-circle"/>
                                         <h3 class="profile-username text-center">Đoàn Hiếu Tâm</h3>
                                         <p class="text-muted text-center">nhoxbypass@gmail.com</p>
                                     </div>

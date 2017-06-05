@@ -1,15 +1,38 @@
 package com.iceteaviet.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
+
 /**
  * Created by Genius Doan on 03/06/2017.
  */
-public class Product {
+
+@Entity
+@Table(name = "Product")
+public class Product implements Serializable {
+    @Id
+    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "name")
+    @NotNull
     private String name;
+
+    @Column(name = "type")
     private Integer type;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "quantity")
     private Integer quantity;
+
+    @Column(name = "price")
     private Integer price;
+
+    @Column(name = "expirydate")
     private String expiryDate;
 
     public Integer getId() {
