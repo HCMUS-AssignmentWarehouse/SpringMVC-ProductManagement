@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Profile | HCMUS Admin</title>
+    <title>Edit Profile | HCMUS Admin</title>
 
     <!-- Bootstrap -->
     <link href="/resources/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -222,97 +222,102 @@
 
                 <div class="clearfix"></div>
 
-                <section class="content">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <!-- Profile Image-->
-                            <div class="box box-primary">
-                                <div class="box-body box-profile"><img src="/resources/images/img.jpg"
-                                                                       alt="User profile picture"
-                                                                       class="profile-user-img img-responsive img-circle"/>
-                                    <h3 class="profile-username text-center">Đoàn Hiếu Tâm</h3>
-                                    <p class="text-muted text-center">nhoxbypass@gmail.com</p>
-                                </div>
-                                <div class="box-body"><strong><i class="fa fa-book margin-r-5"></i> Education</strong>
-                                    <p class="text-muted">Student in Software Engineering Faculty - HCMUS - Vietnam</p>
-                                    <hr/>
-                                    <strong><i class="fa fa-map-marker margin-r-5"></i> Address</strong>
-                                    <p class="text-muted">District 8, HCM city</p>
-                                    <hr/>
-                                    <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
-                                    <p><span class="label label-danger">NodeJS</span><span class="label label-success">PHP</span><span
-                                            class="label label-info">Javascript</span><span class="label label-warning">Java</span><span
-                                            class="label label-primary">C/C++</span></p>
-                                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>User Report
+                                    <small>Activity report</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Settings 1</a>
+                                            </li>
+                                            <li><a href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
                             </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="box box-warning">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">My Profile</h3>
+                            <div class="x_content">
+                                <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
+                                    <div class="box-body box-profile"><img src="/resources/images/user.jpg" alt="User profile picture" class="profile-user-img img-responsive img-circle"/>
+                                        <h3 class="profile-username text-center">Đoàn Hiếu Tâm</h3>
+                                        <p class="text-muted text-center">nhoxbypass@gmail.com</p>
+                                    </div>
+                                    <div class="box-body"><strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+                                        <p class="text-muted">Student in Software Engineering Faculty - HCMUS - Vietnam</p>
+                                        <hr/><strong><i class="fa fa-map-marker margin-r-5"></i> Address</strong>
+                                        <p class="text-muted">District 8, HCM city</p>
+                                        <hr/><strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+                                        <p><span class="label label-danger">NodeJS</span><span class="label label-success">PHP</span><span class="label label-info">Javascript</span><span class="label label-warning">Java</span><span class="label label-primary">C/C++</span></p>
+                                    </div>
+
                                 </div>
-                                <!-- /.box-header-->
-                                <!-- form start-->
-                                <form class="form-horizontal">
-                                    <div class="box-body">
-                                        <div class="row">
-                                            <div class="col-md-offset-0 col-md-11">
-                                                <div class="form-group">
-                                                    <label for="inputName" class="col-sm-2 control-label">Name</label>
-                                                    <div class="col-sm-10">
-                                                        <input id="inputName" type="text" value="Đoàn Hiếu T"
-                                                               placeholder="Name" class="form-control"/>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputStudentID" class="col-sm-2 control-label">User
-                                                        Name</label>
-                                                    <div class="col-sm-10">
-                                                        <input id="inputStudentID" type="text" value="1412477"
-                                                               placeholder="User Name" class="form-control"/>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputPhone"
-                                                           class="col-sm-2 control-label">Birthday</label>
-                                                    <div class="col-sm-10">
-                                                        <input id="inputPhone" type="text" value="22/12/1995"
-                                                               placeholder="Birthday" class="form-control"/>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-                                                    <div class="col-sm-10">
-                                                        <input id="inputEmail" type="text" value="nhoxbypass@gmail.com"
-                                                               placeholder="Email" class="form-control"/>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputPhone" class="col-sm-2 control-label">Phone
-                                                        Number</label>
-                                                    <div class="col-sm-10">
-                                                        <input id="inputPhone" type="text" value="(+84)968 493 4109"
-                                                               placeholder="Phone Number" class="form-control"/>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <div class="box-header with-border">
+                                            <h3 class="box-title">My Profile</h3>
+                                        </div>
+                                        <!-- /.box-header-->
+                                        <!-- form start-->
+                                        <form class="form-horizontal">
+                                            <div class="box-body">
+                                                <div class="row">
+                                                    <div class="col-md-offset-0 col-md-11">
+                                                        <div class="form-group">
+                                                            <label for="inputName" class="col-sm-2 control-label">Name</label>
+                                                            <div class="col-sm-10">
+                                                                <input id="inputName" type="text" value="Đoàn Hiếu Tâm" placeholder="Name" class="form-control"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="inputStudentID" class="col-sm-2 control-label">User Name</label>
+                                                            <div class="col-sm-10">
+                                                                <input id="inputStudentID" type="text" value="1412477" placeholder="User Name" class="form-control"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="inputPhone" class="col-sm-2 control-label">Birthday</label>
+                                                            <div class="col-sm-10">
+                                                                <input id="inputPhone" type="text" value="22/12/1995" placeholder="Birthday" class="form-control"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                                                            <div class="col-sm-10">
+                                                                <input id="inputEmail" type="text" value="nhoxbypass@gmail.com" placeholder="Email" class="form-control"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="inputPhone" class="col-sm-2 control-label">Phone Number</label>
+                                                            <div class="col-sm-10">
+                                                                <input id="inputPhone" type="text" value="+(84)168 493 4109" placeholder="Phone Number" class="form-control"/>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-footer">
-                                        <div class="row">
-                                            <div class="col-md-offset-0 col-md-11">
-                                                <div class="pull-right"><a type="submit" href="/admin"
-                                                                           class="btn btn-success btn-flat">Back</a><a
-                                                        type="submit" href="/admin"
-                                                        class="btn btn-danger btn-flat">Save</a></div>
+                                            <div class="box-footer">
+                                                <div class="row">
+                                                    <div class="col-md-offset-0 col-md-11">
+                                                        <div class="pull-right"><a type="submit" href="/admin" class="btn btn-success btn-flat">Back</a><a type="submit" href="/admin" class="btn btn-danger btn-flat">Save</a></div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                        </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
         <!-- /page content -->
