@@ -11,8 +11,10 @@ import java.io.Serializable;
 @Entity
 @Table(name = "Product")
 public class Product implements Serializable {
+    public static final int TYPE_FOOD = 0;
+    public static final int TYPE_FURNITURE = 1;
+
     @Id
-    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -34,6 +36,20 @@ public class Product implements Serializable {
 
     @Column(name = "expirydate")
     private String expiryDate;
+
+    public Product() {
+
+    }
+
+    public Product(Integer id, String name, Integer type, String description, Integer quantity, Integer price, String expiryDate) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.description = description;
+        this.quantity = quantity;
+        this.price = price;
+        this.expiryDate = expiryDate;
+    }
 
     public Integer getId() {
         return id;

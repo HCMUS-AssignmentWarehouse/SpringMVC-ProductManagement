@@ -1,10 +1,10 @@
 package com.iceteaviet.controllers;
 
-import com.iceteaviet.model.Profile;
+import com.iceteaviet.service.login.MyUserDetailsService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by Genius Doan on 05/06/2017.
@@ -13,13 +13,32 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ProfileController {
 
-    @RequestMapping(value = "/profile", method = RequestMethod.GET)
-    public ModelAndView showProfile() {
-        return new ModelAndView("profile", "profile", new Profile());
+    @RequestMapping(value = "/admin_profile")
+    public String showProfile(Model model) {
+        model.addAttribute("profile", MyUserDetailsService.currentUser);
+        model.addAttribute("username", MyUserDetailsService.currentUser.getUsername());
+
+        return "admin_profile";
     }
 
-    @RequestMapping(value = "/edit_profile", method = RequestMethod.GET)
-    public ModelAndView showEditProfile() {
-        return new ModelAndView("edit_profile", "profile", new Profile());
+    @RequestMapping(value = "/user_profile")
+    public String show_Profile(Model model) {
+        model.addAttribute("profile", MyUserDetailsService.currentUser);
+        model.addAttribute("username", MyUserDetailsService.currentUser.getUsername());
+
+        return "user_profile";
     }
+
+    @RequestMapping(value = "/admin_edit_profile", method = RequestMethod.GET)
+    public String showEditProfile(Model model) {
+        model.addAttribute("username", MyUserDetailsService.currentUser.getUsername());
+        return "admin_profile";
+    }
+
+    @RequestMapping(value = "/user_edit_profile", method = RequestMethod.GET)
+    public String show_EditProfile(Model model) {
+        model.addAttribute("username", MyUserDetailsService.currentUser.getUsername());
+        return "user_profile";
+    }
+
 }

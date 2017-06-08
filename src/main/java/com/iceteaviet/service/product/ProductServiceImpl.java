@@ -4,7 +4,6 @@ import com.iceteaviet.model.Product;
 import com.iceteaviet.service.BaseService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,9 +20,11 @@ public class ProductServiceImpl extends BaseService<Product, Integer> implements
     */
 
     private SessionFactory sessionFactory;
+
     public SessionFactory getSessionFactory() {
         return sessionFactory;
     }
+
     public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
@@ -38,8 +39,10 @@ public class ProductServiceImpl extends BaseService<Product, Integer> implements
             getSession().beginTransaction();
             getSession().save(entity);
             getSession().getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+            if (getSession().getTransaction().isActive())
+                getSession().getTransaction().rollback();
         }
     }
 
@@ -52,8 +55,10 @@ public class ProductServiceImpl extends BaseService<Product, Integer> implements
             getSession().beginTransaction();
             getSession().update(newEntity);
             getSession().getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+            if (getSession().getTransaction().isActive())
+                getSession().getTransaction().rollback();
         }
     }
 
@@ -61,10 +66,12 @@ public class ProductServiceImpl extends BaseService<Product, Integer> implements
         Product product = null;
         try {
             getSession().beginTransaction();
-            product = getSession().get(Product.class,id);
+            product = getSession().get(Product.class, id);
             getSession().getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+            if (getSession().getTransaction().isActive())
+                getSession().getTransaction().rollback();
         }
         return product;
     }
@@ -75,9 +82,10 @@ public class ProductServiceImpl extends BaseService<Product, Integer> implements
             getSession().beginTransaction();
             productList = getSession().createCriteria(Product.class).list();
             getSession().getTransaction().commit();
-
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+            if (getSession().getTransaction().isActive())
+                getSession().getTransaction().rollback();
         }
         return productList;
     }
@@ -97,14 +105,16 @@ public class ProductServiceImpl extends BaseService<Product, Integer> implements
     public void delete(Integer id) {
         try {
             getSession().beginTransaction();
-            Product product = getSession().get(Product.class,id);
-            if (product!=null){
+            Product product = getSession().get(Product.class, id);
+            if (product != null) {
                 getSession().delete(product);
             }
             getSession().getTransaction().commit();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+            if (getSession().getTransaction().isActive())
+                getSession().getTransaction().rollback();
         }
     }
 

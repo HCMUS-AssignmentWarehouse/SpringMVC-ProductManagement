@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public InternalResourceViewResolver viewResolver() {
-        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver("/",".jsp");
+        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver("/", ".jsp");
         return internalResourceViewResolver;
     }
 

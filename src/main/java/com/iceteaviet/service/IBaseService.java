@@ -8,15 +8,26 @@ import java.util.List;
  */
 public interface IBaseService<T, ID extends Serializable> {
     void save(T entity);
+
     void save(List<T> listEntity);
+
     void update(ID id, T newT);
+
     T findOne(ID id);
+
     List<T> findAll();
+
     List<T> findAll(List<ID> listId);
+
     long count();
+
     boolean exists(ID id);
+
     void delete(ID id);
+
     void delete(T entity);
+
     void delete(List<T> listEntity);
+
     void deleteAll();
 }
